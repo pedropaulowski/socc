@@ -3,6 +3,7 @@ package com.ufg.socc.Entidades;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.Set;
 
 @Table(name = "docentes")
 @Entity
@@ -13,4 +14,7 @@ public class Docente {
     private String usuario;
     private String email;
     private Date ingresso;
+
+    @ManyToMany(targetEntity = NucleoConhecimento.class)
+    private Set nucleosConhecimento;
 }
