@@ -1,15 +1,20 @@
 package com.ufg.socc.Controladores;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import com.ufg.socc.Entidades.Docente;
+import com.ufg.socc.Services.DocenteService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController()
 @RequestMapping(value = "/docentes")
 public class DocenteResource {
+    @Autowired
+    private DocenteService docenteService;
 
-    @RequestMapping(method = RequestMethod.GET)
-    public String listar() {
-        return "Lista de Docentes";
+    @GetMapping("/")
+    public List<Docente> listar() {
+        return docenteService.listar();
     }
 }
