@@ -1,5 +1,10 @@
 package com.ufg.socc.Controladores;
 
+import com.ufg.socc.Entidades.NucleoConhecimentoEntidade;
+import com.ufg.socc.Repositorio.NucleoConhecimentoRepository;
+import com.ufg.socc.Services.NucleoConhecimentoService;
+import com.ufg.socc.Services.NucleoConhecimentoServiceImp;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,18 +13,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController()
 @RequestMapping("/nucleo_conhecimento")
 public class NucleoConhecimento {
+    @Autowired
+    private NucleoConhecimentoService nucleoConhecimentoService;
 
     @GetMapping("/{id}")
-    public ResponseEntity<NucleoConhecimento> buscar(@PathVariable Long id) {
-        return new ResponseEntity<>(HttpStatus.OK);
+    public NucleoConhecimentoEntidade buscar(@PathVariable Long id) {
+        throw new RuntimeException("Metodo não implementado");
     }
 
     @GetMapping("/")
-    public ResponseEntity<List<NucleoConhecimento>> listar() {
-        return new ResponseEntity<>(HttpStatus.OK);
+    public List<NucleoConhecimentoEntidade> buscarTodos() {
+        return nucleoConhecimentoService.buscarTodosNucleos();
     }
 }
