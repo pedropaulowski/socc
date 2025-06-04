@@ -15,6 +15,6 @@ public class Docente {
     private String email;
     private Date ingresso;
 
-    @ManyToMany(targetEntity = NucleoConhecimento.class)
+    @ManyToMany(targetEntity = NucleoConhecimentoEntidade.class)
     private Set nucleosConhecimento;
 }
