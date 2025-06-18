@@ -12,7 +12,6 @@ public class Disciplina {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String usuario;
     private Integer nucleo_id;
     private Integer matriz;
     private Integer ch_teorica;
