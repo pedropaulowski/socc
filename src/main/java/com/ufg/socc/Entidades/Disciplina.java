@@ -10,11 +10,11 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Disciplina {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    protected Long id;
 
-    private Integer nucleo_id;
-    private Integer matriz;
-    private Integer ch_teorica;
-    private Integer ch_pratica;
-    private Integer ch_total;
+    protected Integer nucleo_id;
+    protected Integer matriz;
+    protected Integer ch_teorica;
+    protected Integer ch_pratica;
+    protected Integer ch_total;
 }

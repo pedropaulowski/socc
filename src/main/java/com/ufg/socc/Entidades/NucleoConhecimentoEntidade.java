@@ -10,9 +10,9 @@ import java.util.Set;
 public class NucleoConhecimentoEntidade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long id;
-    public String nome;
-
+    protected Long id;
+    protected String nome;
+    protected String descricao;
     @ManyToMany(targetEntity = Docente.class)
-    public Set docentes;
+    protected Set docentes;
 }

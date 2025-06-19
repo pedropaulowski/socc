@@ -9,12 +9,12 @@ import java.util.Set;
 @Entity
 public class Docente {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String nome;
-    private String usuario;
-    private String email;
-    private Date ingresso;
+    protected Long id;
+    protected String nome;
+    protected String usuario;
+    protected String email;
+    protected Date ingresso;
 
     @ManyToMany(targetEntity = NucleoConhecimentoEntidade.class)
-    private Set nucleosConhecimento;
+    protected Set nucleosConhecimento;
 }
