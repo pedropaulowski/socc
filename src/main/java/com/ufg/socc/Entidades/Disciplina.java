@@ -1,8 +1,11 @@
 package com.ufg.socc.Entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -10,11 +13,18 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Disciplina {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected Long id;
+    private Long id;
 
-    protected Integer nucleo_id;
-    protected Integer matriz;
-    protected Integer ch_teorica;
-    protected Integer ch_pratica;
-    protected Integer ch_total;
+    private Integer nucleo_id;
+    private Integer matriz;
+    private Integer ch_teorica;
+    private Integer ch_pratica;
+    private Integer ch_total;
+    private String nome;
+
+    @JsonIgnore
+    @ManyToMany(targetEntity = NucleoConhecimentoEntidade.class)
+    private Set nucleosConhecimento;
+
+
 }

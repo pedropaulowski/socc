@@ -1,18 +1,33 @@
 package com.ufg.socc.Entidades;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Set;
 
 @Entity
 @Table(name="nucleos_conhecimento")
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
 public class NucleoConhecimentoEntidade {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected Long id;
-    protected String nome;
-    protected String descricao;
+    private Long id;
+    private String nome;
+    private String descricao;
+
+    @JsonIgnore
     @ManyToMany(targetEntity = Docente.class)
-    protected Set docentes;
+    private Set docentes;
+
+    @JsonIgnore
+    @ManyToMany(targetEntity = Disciplina.class)
+    private Set disciplina;
 }
