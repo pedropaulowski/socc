@@ -1,6 +1,5 @@
 package com.ufg.socc.Entidades;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -30,4 +29,8 @@ public class NucleoConhecimentoEntidade {
     @JsonIgnore
     @ManyToMany(targetEntity = Disciplina.class)
     private Set disciplina;
+
+    // public void setId(Long id) {
+    //     this.id = id;
+    // }
 }

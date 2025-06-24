@@ -1,0 +1,387 @@
+/* AcademicInterface.module.css */
+
+/* Container principal */
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 320px;
+  background-color: white;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+}
+
+.sidebarHeader {
+  padding: 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sidebarTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebarTitle svg {
+  color: #2563eb;
+}
+
+.sidebarContent {
+  padding: 16px;
+}
+
+.areaList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Area Item */
+.areaItem {
+  width: 100%;
+  text-align: left;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.areaItem:hover {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.areaItemSelected {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.areaItemContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.areaItem svg {
+  margin-top: 2px;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.areaItemSelected svg {
+  color: #2563eb;
+}
+
+.areaItemText {
+  flex: 1;
+  min-width: 0;
+}
+
+.areaItemTitle {
+  font-weight: 500;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.areaItemSelected .areaItemTitle {
+  color: #1e3a8a;
+}
+
+.areaItemDescription {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Main Content */
+.mainContent {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.contentContainer {
+  padding: 24px;
+}
+
+/* Header */
+.header {
+  margin-bottom: 32px;
+}
+
+.headerTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111827;
+  margin: 0 0 8px 0;
+}
+
+.headerDescription {
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Section */
+.section {
+  margin-bottom: 32px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 8px;
+}
+
+.sectionHeader svg {
+  color: #2563eb;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* Cards */
+.cardGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+@media (max-width: 768px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 24px;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.cardContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.cardIcon {
+  flex-shrink: 0;
+}
+
+.iconCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconCircleBlue {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.iconCircleGreen {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.cardInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 12px 0;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardDetail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.cardDetail svg {
+  flex-shrink: 0;
+}
+
+/* Discipline specific styles */
+.disciplineGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.disciplineItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.disciplineLabel {
+  color: #6b7280;
+}
+
+.disciplineValue {
+  font-weight: 500;
+  color: #111827;
+}
+
+.disciplineValueHighlight {
+  color: #2563eb;
+}
+
+/* Loading Spinner */
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #e5e7eb;
+  border-top: 2px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+  color: #6b7280;
+}
+
+.emptyState svg {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.emptyState p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Error State */
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 0;
+  color: #dc2626;
+}
+
+.errorIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.errorMessage {
+  font-size: 16px;
+  margin: 0 0 16px 0;
+  text-align: center;
+  color: #6b7280;
+}
+
+.retryButton {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.retryButton:hover {
+  background-color: #1d4ed8;
+}
+
+.retryButton:active {
+  background-color: #1e40af;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+  }
+
+  .contentContainer {
+    padding: 16px;
+  }
+
+  .disciplineGrid {
+    grid-template-columns: 1fr;
+  }
+}

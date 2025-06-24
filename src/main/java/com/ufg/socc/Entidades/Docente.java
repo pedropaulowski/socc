@@ -23,4 +23,8 @@ public class Docente {
     @JsonIgnore
     @ManyToMany(targetEntity = NucleoConhecimentoEntidade.class)
     private Set nucleosConhecimento;
+
+    // public Long getId() {
+    //     return this.id;
+    // }
 }
